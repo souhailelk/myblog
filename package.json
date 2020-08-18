@@ -12,6 +12,9 @@
     "tailwindcss": "^1.6.2"
   },
   "scripts": {
+    "build:tailwind": "tailwindcss build src/assets/tailwind.css -o src/assets/main.css",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
