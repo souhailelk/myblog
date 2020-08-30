@@ -1,5 +1,5 @@
-class Article{
-    constructor(title, content, date, tags){
+class Article {
+    constructor(title, content, date, tags) {
         this.title = title;
         this.content = content;
         this.date = date;
