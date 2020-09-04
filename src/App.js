@@ -39,9 +39,9 @@ function GetResume() {
     "The purpose behind this project was to approach NP problems and try to implement solutions that have lower complexity. We choosed as a problem a sudoku grid generator, in the length 3x3, 6x6, 9x9 and 16x16.",
     "06/01/2016",
     "06/06/2016")
-  const experiences = [experience]
-  const projects = [project]
-  const educations = [education]
+  const experiences = [experience,experience]
+  const projects = [project, project]
+  const educations = [education,education]
   return new Resume("ELKAISSI SOUHAIL", description, projects, experiences, educations);
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Description(props) {
     return (
-        <div class="block px-4 py-2 font-sans text-lg text-left">
+        <div class="block px-4 py-2 font-sans text-sm text-left">
             Description :
             <div class="block px-4 py-2 font-sans text-lg text-left">{props.description}</div>
         </div>
@@ -12,17 +12,17 @@ function Description(props) {
 function Experiences(props) {
     let experiencesComponents = []
     props.experiences.forEach(experience => {
-        experiencesComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left">
-            <div><a href={experience.companyLink}>{experience.companyName}</a></div>
-            <div>{experience.jobTitle}</div>
+        experiencesComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left m-4">
+            <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">{experience.jobTitle}</div>
+            <div class="inline-block text-center m-1">{experience.startDate}</div>
+            <div class="inline-block text-center m-1">-</div>
+            <div class="inline-block text-center m-1">{experience.endDate}</div>
+            <div class="uppercase"><a href={experience.companyLink}>{experience.companyName}</a></div>
             <div>{experience.description}</div>
-            <div>{experience.startDate}</div>
-            <div>{experience.endDate}</div>
-
         </div>)
     });
     return (
-        <div class="block px-4 py-2 font-sans text-lg text-left">
+        <div class="block px-4 py-2 font-sans text-sm text-left">
             Experiences :
             {experiencesComponents}
         </div>
@@ -32,17 +32,17 @@ function Experiences(props) {
 function Projects(props) {
     let projectsComponents = []
     props.projects.forEach(project => {
-        projectsComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left">
-            <div><a href={project.projectLink}>{project.projectName}</a></div>
+        projectsComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left m-4">
+            <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold"><a href={project.projectLink}>{project.projectName}</a></div>
+            <div class="inline-block text-center m-1">{project.startDate}</div>
+            <div class="inline-block text-center m-1">-</div>
+            <div class="inline-block text-center m-1">{project.endDate}</div>
             <div>{project.description}</div>
-            <div>{project.startDate}</div>
-            <div>{project.endDate}</div>
-
         </div>)
     });
 
     return (
-        <div class="block px-4 py-2 font-sans text-lg text-left">
+        <div class="block px-4 py-2 font-sans text-sm text-left">
             Projects :
             {projectsComponents}
         </div>
@@ -52,18 +52,17 @@ function Projects(props) {
 function Educations(props) {
     let educationsComponents = []
     props.educations.forEach(education => {
-        educationsComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left">
-            <div><a href={education.schoolLink}>{education.schoolName}</a></div>
-            <div>{education.degree}</div>
-            <div>{education.description}</div>
-            <div>{education.startDate}</div>
-            <div>{education.endDate}</div>
-
+        educationsComponents.push(<div class="block px-4 py-2 font-sans text-lg text-left m-4">
+            <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">{education.degree}</div>
+            <div class="inline-block text-center m-1">{education.startDate}</div>
+            <div class="inline-block text-center m-1">-</div>
+            <div class="inline-block text-center m-1">{education.endDate}</div>
+            <div class="uppercase"><a href={education.schoolLink}>{education.schoolName}</a></div>
         </div>)
     });
 
     return (
-        <div class="block px-4 py-2 font-sans text-lg text-left">
+        <div class="block px-4 py-2 font-sans text-sm text-left">
             Education :
             {educationsComponents}
         </div>
