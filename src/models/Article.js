@@ -1,5 +1,6 @@
 class Article {
-    constructor(title, content, date, tags) {
+    constructor(id, title, content, date, tags) {
+        this.id = id;
         this.title = title;
         this.content = content;
         this.date = date;

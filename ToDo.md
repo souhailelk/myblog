@@ -1,8 +1,6 @@
 # To Do
 
-- Build a blog
 - Store blog's information
-- Build a virtual resume
 - Store resume's information
 - Backend with .NET Core
 - Search in blog
@@ -10,7 +8,7 @@
 - Resume's form
 - Main page ?
 - Connect to LinkedIn, facebook, instagram
-- Add tags, categories...
+
 - Host blog
 - 404
 
@@ -22,3 +20,7 @@
 - Reactjs
 
 ## Done
+
+- Build a blog
+- Build a virtual resume
+- Add tags, categories...
