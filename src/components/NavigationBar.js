@@ -5,12 +5,12 @@ function NavigationBar(props) {
     let items = []
     navigationBarItems.forEach(navigationBarItem => {
         items.push(
-            <li class="mr-6 font-medium hover:text-gray-900 transition duration-150 ease-in-out">
+            <li class="mr-5 font-medium hover:text-gray-900 transition duration-150 ease-in-out">
                 <a href={navigationBarItem.route}>{navigationBarItem.name}</a>
             </li>)
     });
     return (
-        <div class="md:block md:ml-10 md:pr-4">
+        <div class="flex justify-center">
             <nav>
                 <ul class="flex">
                     {items}
