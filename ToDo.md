@@ -9,9 +9,6 @@
 - Main page ?
 - Connect to LinkedIn, facebook, instagram
 
-- Host blog
-- 404
-
 ## To Explore
 
 - Tailwind
@@ -24,3 +21,5 @@
 - Build a blog
 - Build a virtual resume
 - Add tags, categories...
+- Host blog
+- 404 page

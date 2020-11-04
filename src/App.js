@@ -13,13 +13,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation
+  useLocation,
 } from "react-router-dom";
 
 
 
 function GetArticle(id) {
-const content = <p>{id}From Elecrow. I have two of their first CrowPi device and I use them in demonstrations and talks all the time, especially when talking to students.
+  const content = <p>{id}From Elecrow. I have two of their first CrowPi device and I use them in demonstrations and talks all the time, especially when talking to students.
   They have a Kickstarter ending this week for the new CrowPi2. It's an update of the original CrowPi which was basically a Raspberry Pi in a tiny suitcase...instead the CrowPi2 looks like a laptop! The magical part is that the full exploration and sensor board is hidden underneath a wireless keyboard with trackpad, held on with magnets!
   The CrowPi folks sent me an early CrowPi2 because I was a vocal supporter of the previous version, so I did a LIVE video unboxing on twitter as well as a follow up software video on the CrowPi2. I am not being paid for this review and I always am honest with y'all about the stuff I like. I plan on buying a few for my kids' public school science class.</p>
   const title = "Reviewing the Elecrow CrowPi2 Raspberry Pi Laptop and STEM Education Platform"
@@ -53,14 +53,27 @@ function GetResume() {
   return new Resume("ELKAISSI SOUHAIL", description, projects, experiences, educations);
 }
 
-function Page404(){
+function Page404() {
   let location = useLocation();
 
   return (
     <div>
-        No match for {location.pathname}
+      <div class="h-screen w-screen  flex justify-center content-center flex-wrap">
+        <div class="font-sans  text-6xl">404 Not found</div>
+        <div class="font-sans text-center  w-screen text-3xl">No match for <span class="font-black">'{location.pathname}'</span></div>
+        <a class="w-screen bottom-3  text-center font-sans text-xl" href="/">GO HOME ?</a>
+      </div>
     </div>
   );
+}
+
+function Home() {
+  return (
+    <div>
+      <div class="h-screen w-screen flex justify-center content-center flex-wrap">
+        <div>Hi! I'm Souhail, I'm a software engineer, I created this website to present my education and professional background, present my personal projects, and also to write eventually about diverse subjects.</div>
+      </div>
+    </div>);
 }
 
 function App() {
@@ -85,17 +98,15 @@ function App() {
     <NavigationBarComponent navigationBarItems={navigationBarItems} />
     <Router>
       <Switch>
-      {ArticlesRoutes}
+        {ArticlesRoutes}
         <Route path="/Resume">
           <ResumeComponent resume={GetResume()} />
         </Route>
         <Route path="/Articles">
           {articleCards}
         </Route>
-        <Route path="/" />
-        <Route path='*'>
-          <Page404 />
-        </Route>
+        <Route path="/" exact component={Home} />
+        <Route component={Page404} />
       </Switch>
     </Router>
   </div>
