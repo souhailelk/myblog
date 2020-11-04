@@ -10,7 +10,7 @@ function NavigationBar(props) {
             </li>)
     });
     return (
-        <div class="hidden md:block md:ml-10 md:pr-4">
+        <div class="md:block md:ml-10 md:pr-4">
             <nav>
                 <ul class="flex">
                     {items}
