@@ -1,20 +1,22 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import ArticleComponent from './components/Article'
+import HomeComponent from './components/Home'
+import Page404Component from './components/Page404'
 import NavigationBarComponent from './components/NavigationBar'
+import ResumeComponent from './components/Resume'
 import ArticleCard from './components/ArticleCard'
 import Article from './models/Article'
-import ResumeComponent from './components/Resume'
 import Resume from './models/Resume'
 import Experience from './models/Experience'
 import Project from './models/Project'
 import Education from './models/Education'
 import NavigationBarItem from './models/NavigationBarItem'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from "react-router-dom";
+
 
 
 
@@ -53,37 +55,6 @@ function GetResume() {
   return new Resume("ELKAISSI SOUHAIL", description, projects, experiences, educations);
 }
 
-function Page404() {
-  let location = useLocation();
-
-  return (
-    <div>
-      <div class="h-screen w-screen  flex justify-center content-center flex-wrap">
-        <div class="font-sans  text-6xl">404 Not found</div>
-        <div class="font-sans text-center  w-screen text-3xl">No match for <span class="font-black">'{location.pathname}'</span></div>
-        <a class="w-screen bottom-3  text-center font-sans text-xl" href="/">GO HOME ?</a>
-      </div>
-    </div>
-  );
-}
-
-function Home() {
-  return (
-    <div className="flex justify-center overflow-hidden rounded">
-      <div class="box-content max-w-screen-lg shadow-lg px-6 py-4 m-2">
-        <div class="h-screen flex justify-center content-center flex-wrap px-2 m-2">
-          <div class="text-2xl">Hi! I'm Souhail, I'm a software engineer, I created this website to present my education and professional background, present my personal projects, and also to write eventually about diverse subjects.</div>
-        </div>
-        <div class="flex justify-center">
-          <div class="flex-initial text-center px-4 py-2 m-2"><a href="https://twitter.com/SouhailElk"><img class="object-contain h-10" alt="twitter" src="https://www.flaticon.com/svg/static/icons/svg/145/145812.svg" /></a></div>
-          <div class="flex-initial text-center px-4 py-2 m-2"><a href="https://github.com/souhailelk"><img class="object-contain h-10" alt="github" src="https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg" /></a></div>
-          <div class="flex-initial text-center px-4 py-2 m-2"><a href="https://www.linkedin.com/in/souhail-elkaissi/"><img class="object-contain h-10" alt="linkedin" src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg" /></a></div>
-          <div class="flex-initial text-center px-4 py-2 m-2"><a href="mailto: elkaissi.souhail.me@gmail.com"><img class="object-contain h-10" alt="email" src="https://www.flaticon.com/svg/static/icons/svg/2991/2991144.svg" /></a></div>
-        </div>
-      </div>
-    </div>);
-}
-
 function App() {
   const navigationBarItems =
     [
@@ -113,8 +84,8 @@ function App() {
         <Route path="/Articles">
           {articleCards}
         </Route>
-        <Route path="/" exact component={Home} />
-        <Route component={Page404} />
+        <Route path="/" exact component={HomeComponent} />
+        <Route component={Page404Component} />
       </Switch>
     </Router>
   </div>
