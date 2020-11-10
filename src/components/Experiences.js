@@ -8,7 +8,7 @@ function Experiences(props) {
             <div class="inline-block text-center text-xs md:text-sm md:m-1">-</div>
             <div class="inline-block text-center text-xs md:text-sm md:m-1">{experience.endDate}</div>
             <div class="uppercase text-xs md:text-sm"><a href={experience.companyLink}>{experience.companyName}</a></div>
-            <div class="text-base md:text-lg">{experience.description}</div>
+            <div class="text-xs md:text-lg m-2">{experience.description}</div>
         </div>)
     });
     return (

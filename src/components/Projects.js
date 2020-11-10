@@ -7,7 +7,7 @@ function Projects(props) {
             <div class="inline-block text-center text-xs md:text-sm md:m-1">{project.startDate}</div>
             <div class="inline-block text-center text-xs md:text-sm md:m-1">-</div>
             <div class="inline-block text-center text-xs md:text-sm md:m-1">{project.endDate}</div>
-            <div class="text-base md:text-lg">{project.description}</div>
+            <div class="text-xs md:text-lg m-2">{project.description}</div>
         </div>)
     });
 
