@@ -5,7 +5,7 @@ function Home() {
         <div className="flex justify-center overflow-hidden rounded">
             <div class="box-content max-w-screen-lg shadow-lg px-6 py-4">
                 <div class=" flex justify-center content-center flex-wrap px-2">
-                    <div class="text-2xl">Hi! I'm Souhail, I'm a software engineer, I created this website to present my education and professional background, present my personal projects, and also to write eventually about diverse subjects.</div>
+                    <div class="sm:text-sm md:text-2xl">Hi! I'm Souhail, I'm a software engineer, I created this website to present my education and professional background, present my personal projects, and also to write eventually about diverse subjects.</div>
                 </div>
 
                 <div class="justify-center text-center text-xl font-medium mt-3">Contact me:</div>
