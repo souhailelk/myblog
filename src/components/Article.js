@@ -11,7 +11,7 @@ function Article(props) {
             <div className="w-screen min-h-screen box-content max-w-screen-lg shadow-lg px-6 py-4">
                 <div class="font-bold justify-center text-2xl mm:text-4xl break-words">{article.title}</div>
                 <div class="flex text-sm md:text-lg tracking-widest break-words ml-3 mb-3">published on {article.date}</div>
-                <div class="text-gray-700 text-xs md:text-base leading-relaxed text-justify break-words sm:px-3 sm:py-2 md:px-6 md:py-4">{article.content}</div>
+                <div class="text-gray-700 text-xs md:text-base leading-relaxed text-justify font-mono break-words px-2 py-6">{article.content}</div>
                 <div class="px-6 py-4">{tags}</div>
             </div>
         </div>
