@@ -4,6 +4,7 @@ function Home() {
     return (
         <div className="flex justify-center overflow-hidden rounded">
             <div class="box-content max-w-screen-lg shadow-lg px-6 py-4">
+            <img alt="image" class="object-none w-full h-48" src="https://picsum.photos/600/400/?random" />
                 <div class=" flex justify-center content-center flex-wrap px-2">
                     <div class="sm:text-sm md:text-2xl">Hi! I'm Souhail, I'm a software engineer, I created this website to present my education and professional background, present my personal projects, and also to write eventually about diverse subjects.</div>
                 </div>
