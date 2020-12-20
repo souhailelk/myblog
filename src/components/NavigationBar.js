@@ -16,7 +16,7 @@ function NavigationBar(props) {
     return (
         <nav class="flex items-center justify-between flex-wrap bg-black p-3">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <span class="font-semibold text-2xl tracking-tight"><a href="/">S\E</a></span>
+                <span class="font-semibold text-2xl tracking-tight"><a href="/">S\E</a> beta </span>
             </div>
             <div class="block lg:hidden">
                 <button class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white" onClick={() => setNavbarOpen(!navbarOpen)}>
