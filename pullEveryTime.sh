@@ -6,6 +6,7 @@ if [[ $# -eq 1 ]]; then
             git fetch
             if [[ $(git rev-parse HEAD) == $(git rev-parse @{u}) ]]; then
                 pm2 delete "serve -s build"
+                git reset --hard
                 git pull --rebase origin main
                 npm run-script build
                 pm2 start "serve -s build"    
