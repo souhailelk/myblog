@@ -4,7 +4,7 @@ if [[ $# -eq 1 ]]; then
         pushd $1
         while true; do
             git fetch
-            if [[ $(git rev-parse HEAD) == $(git rev-parse @{u}) ]]; then
+            if [[ $(git rev-parse HEAD) != $(git rev-parse @{u}) ]]; then
                 pm2 delete "serve -s build"
                 git reset --hard
                 git pull --rebase origin main
