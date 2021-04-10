@@ -62,7 +62,12 @@ function App() {
       new NavigationBarItem("Resume", "/Resume"),
       new NavigationBarItem("Articles", "/Articles"),
     ]
-  const articles = [GetArticle(1), GetArticle(2), GetArticle(3)]
+    const articles = []
+    for (let index = 0; index < 20; index++) {
+      articles.push(GetArticle(index));
+      
+    }
+  
   let articleCards = []
   articles.forEach(article => articleCards.push(
     <ArticleCard article={article} />
@@ -82,7 +87,7 @@ function App() {
           <ResumeComponent resume={GetResume()} />
         </Route>
         <Route path="/Articles">
-          {articleCards}
+          <div class="flex flex-wrap content-around items-center justify-center">{articleCards}</div>
         </Route>
         <Route path="/" exact component={HomeComponent} />
         <Route component={Page404Component} />
