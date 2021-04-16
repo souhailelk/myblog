@@ -9,14 +9,13 @@ import HomeComponent from './components/Home'
 import Page404Component from './components/Page404'
 import NavigationBarComponent from './components/NavigationBar'
 import ResumeComponent from './components/Resume'
-import ArticleCard from './components/ArticleCard'
 import Article from './models/Article'
 import Resume from './models/Resume'
 import Experience from './models/Experience'
 import Project from './models/Project'
 import Education from './models/Education'
 import NavigationBarItem from './models/NavigationBarItem'
-
+import ArticlesComponent from './components/Articles'
 
 
 
@@ -31,7 +30,7 @@ function GetArticle(id) {
 }
 
 function GetResume() {
-  const description = "I'm A Software Engineer";
+  const description = "I'm A junior Software Engineer, I live in Rabat, Morocco.";
   var experience = new Experience("société générale africa technologies & services",
     "http://africa-technologies-services.sgcib.com/",
     "Software Engineer",
@@ -63,15 +62,10 @@ function App() {
       new NavigationBarItem("Articles", "/Articles"),
     ]
     const articles = []
-    for (let index = 0; index < 20; index++) {
+    for (let index = 0; index < 3; index++) {
       articles.push(GetArticle(index));
       
     }
-  
-  let articleCards = []
-  articles.forEach(article => articleCards.push(
-    <ArticleCard article={article} />
-  ))
   let ArticlesRoutes = []
   articles.forEach(article => ArticlesRoutes.push(
     <Route path={"/Article/" + article.id}>
@@ -87,7 +81,7 @@ function App() {
           <ResumeComponent resume={GetResume()} />
         </Route>
         <Route path="/Articles">
-          <div class="flex flex-wrap content-around items-center justify-center">{articleCards}</div>
+        <ArticlesComponent articles={articles} />
         </Route>
         <Route path="/" exact component={HomeComponent} />
         <Route component={Page404Component} />
