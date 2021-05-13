@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 let links = [
     {
         httplink: "https://twitter.com/SouhailElk",
@@ -29,7 +27,7 @@ function MyLinks() {
     let Linksdivs = []
     links.forEach(link => {
         Linksdivs.push(
-            <div class="flex-initial text-center m-5">
+            <div class="flex-initial m-5">
                 <a href={link.httplink}><img class="object-contain h-10" alt={link.alt} src={link.iconLink} />
                 </a>
             </div>
@@ -37,8 +35,8 @@ function MyLinks() {
 
     });
     return (
-        <div>
-            <div class="justify-center text-center text-xl font-medium mt-3">Contact me:</div>
+        <div class="text-center">
+            <div class="justify-center text-xl font-medium mt-3">Contact me:</div>
             <div class="flex justify-center">
                 {Linksdivs}
             </div>
@@ -46,21 +44,21 @@ function MyLinks() {
     );
 }
 
-
-
-
 function Home() {
-    let describeMe = "Hi! I'm Souhail, I'm a software engineer and a competitive programming enthusiast. \
+    let describeMe = "Hi! I'm Souhail, I'm a software engineer and a competitive programming enthusiast.\
     I created this website to present my educational and professional background, my personal side projects,\
     and hopefully to be able to write about diverse subjects."
     return (
-        <div className="flex justify-center overflow-hidden rounded">
-            <div class="box-content max-w-screen-lg shadow-lg px-6 py-4">
-                <img alt="image" class="object-none w-full h-48" src="https://picsum.photos/600/400/?random" />
-                <div class="block px-4 py-2 font-sans test-base text-s md:text-lg m-2 text-left">{describeMe}</div>
+        <div className="flex flex-wrap justify-center overflow-hidden rounded p-3">
+            <div class="max-w-full md:max-w-lg rounded overflow-hidden">
+                <img class="object-cover w-full" alt="Home" src="https://picsum.photos/600/400/?random" />
+            </div>
+            <div class="max-w-full md:max-w-lg rounded overflow-hidden">
+                <div class="px-4 py-2 font-sans test-base text-s md:text-lg m-2 text-left">{describeMe}</div>
                 <MyLinks />
             </div>
-        </div>);
+        </div>
+    );
 }
 
 export default Home;
