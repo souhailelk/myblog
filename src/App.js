@@ -72,7 +72,7 @@ function App() {
       <ArticleComponent article={article} />
     </Route>
   ))
-  return (<div>
+  return (<div class="h-screen w-sceen">
     <NavigationBarComponent navigationBarItems={navigationBarItems} />
     <Router>
       <Switch>
