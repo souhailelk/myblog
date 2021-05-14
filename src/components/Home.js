@@ -27,16 +27,18 @@ function MyLinks() {
     let Linksdivs = []
     links.forEach(link => {
         Linksdivs.push(
-            <div class="flex-initial m-5">
-                <a href={link.httplink}><img class="object-contain h-10" alt={link.alt} src={link.iconLink} />
+            <div class="m-5">
+                <a href={link.httplink}>
+                    <img class="object-contain h-10" alt={link.alt} src={link.iconLink} />
                 </a>
             </div>
         )
 
     });
     return (
-        <div class="text-center">
-            <div class="justify-center text-xl font-medium mt-3">Contact me:</div>
+        <div>
+            
+            <div class="text-center font-sans text-sm md:text-xl font-black">Let's get social</div>
             <div class="flex justify-center">
                 {Linksdivs}
             </div>
@@ -45,9 +47,13 @@ function MyLinks() {
 }
 
 function Home() {
-    let describeMe = "Hi! I'm Souhail, I'm a software engineer and a competitive programming enthusiast.\
-    I created this website to present my educational and professional background, my personal side projects,\
-    and hopefully to be able to write about diverse subjects."
+    let describeMe = (
+    <div>
+        <p class="font-sans text-sm md:text-xl font-black">Hello, I'm Souhail El Kaissi.</p>
+    <p class="block px-4 py-2 font-sans test-base text-xs md:text-lg text-left">I'm a software engineer and a competitive programming enthusiast.</p>
+    <p class="block px-4 py-2 font-sans test-base text-xs md:text-lg text-left">You will find here my educational and professional background, my personal side projects,
+    and hopefully many articles about diverse subjects.</p>
+    </div>)
     return (
         <div className="flex flex-wrap justify-center overflow-hidden rounded p-3">
             <div class="max-w-full md:max-w-lg rounded overflow-hidden">
