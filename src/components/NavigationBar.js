@@ -14,8 +14,8 @@ function NavigationBar(props) {
     });
 
     return (
-        <nav class="flex  justify-between flex-wrap text-white bg-black p-3">
-            <span class="items-center mr-6 text-2xl tracking-tight font-semibold"><a href="/">S\E</a> beta</span>
+        <nav class="flex justify-between flex-wrap text-white bg-black p-3">
+            <span class="items-center mr-6 text-2xl tracking-tight font-semibold"><a href="/">S\E</a> Beta</span>
             <button class="lg:hidden px-3 py-2 border rounded border-white" onClick={() => setNavbarOpen(!navbarOpen)}>
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
