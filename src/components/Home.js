@@ -37,7 +37,7 @@ function MyLinks() {
     });
     return (
         <div>
-            
+
             <div class="text-center font-sans text-sm md:text-xl font-black">Let's get social</div>
             <div class="flex justify-center">
                 {Linksdivs}
@@ -47,22 +47,28 @@ function MyLinks() {
 }
 
 function Home() {
-    let describeMe = (
-    <div>
-        <p class="font-sans text-sm md:text-xl font-black">Hello, I'm Souhail El Kaissi.</p>
-    <p class="block px-4 py-2 font-sans test-base text-xs md:text-lg text-left">I'm a software engineer and a competitive programming enthusiast.</p>
-    <p class="block px-4 py-2 font-sans test-base text-xs md:text-lg text-left">You will find here my educational and professional background, my personal side projects,
-    and hopefully many articles about diverse subjects.</p>
-    </div>)
+    let title = "Hello, I'm Souhail El Kaissi."
+    let text = ["I'm a software engineer and a competitive programming enthusiast.",
+        "You will find here my educational and professional background, my personal side projects, and hopefully many articles about diverse subjects."]
+    let bodyContent = []
+    text.forEach(txt => bodyContent.push(<p class="px-4 py-2">{txt}</p>))
     return (
-        <div className="flex flex-wrap justify-center overflow-hidden rounded p-3">
+        <div className=" flex flex-wrap justify-center overflow-hidden rounded p-3">
             <div class="max-w-full md:max-w-lg rounded overflow-hidden">
                 <img class="object-cover w-full" alt="Home" src="https://picsum.photos/600/400/?random" />
             </div>
             <div class="max-w-full md:max-w-lg rounded overflow-hidden">
-                <div class="px-4 py-2 font-sans test-base text-s md:text-lg m-2 text-left">{describeMe}</div>
+                <div class="px-4 py-2 font-sans test-base text-s md:text-lg m-2 text-left">
+                    <p class="font-sans text-sm md:text-xl font-black">
+                        {title}
+                    </p>
+                    <div class="block font-sans test-base text-xs md:text-lg text-left">
+                        {bodyContent}
+                    </div>
+                </div>
                 <MyLinks />
             </div>
+
         </div>
     );
 }
