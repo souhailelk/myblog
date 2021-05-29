@@ -9,7 +9,7 @@ function Article(props) {
 
         <div className="flex justify-center overflow-hidden rounded">
             <div className="w-screen min-h-screen box-content max-w-screen-lg shadow-lg px-6 py-4">
-            <img alt="image" class="object-fill h-48 w-full" src="https://picsum.photos/600/400/?random" />
+            <img alt="Article" class="object-fill h-48 w-full" src="https://picsum.photos/600/400/?random" />
                 <div class="font-bold justify-center text-2xl mm:text-4xl break-words">{article.title}</div>
                 <div class="flex text-sm md:text-lg tracking-widest break-words ml-3 mb-3">published on {article.date}</div>
                 <div class="text-gray-700 text-xs md:text-base leading-relaxed text-justify font-mono break-words px-2 py-6">{article.content}</div>
