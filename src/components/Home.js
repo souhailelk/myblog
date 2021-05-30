@@ -53,16 +53,16 @@ function Home() {
     let bodyContent = []
     text.forEach(txt => bodyContent.push(<p class="px-4 py-2">{txt}</p>))
     return (
-        <div className=" flex flex-wrap justify-center overflow-hidden rounded p-3">
+        <div className="flex flex-wrap justify-center overflow-hidden rounded p-3">
             <div class="max-w-full md:max-w-lg rounded overflow-hidden">
                 <img class="object-cover w-full" alt="Home" src="https://picsum.photos/600/400/?random" />
             </div>
             <div class="max-w-full md:max-w-lg rounded overflow-hidden">
-                <div class="px-4 py-2 font-sans test-base text-s md:text-lg m-2 text-left">
-                    <p class="font-sans text-sm md:text-xl font-black">
+                <div class="px-4 py-2">
+                    <p class="font-mono text-xl md:text-2xl font-black">
                         {title}
                     </p>
-                    <div class="block font-sans test-base text-xs md:text-lg text-left">
+                    <div class="block font-sans text-justify text-lg md:text-xl text-left">
                         {bodyContent}
                     </div>
                 </div>
