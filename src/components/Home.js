@@ -27,7 +27,7 @@ function MyLinks() {
     let Linksdivs = []
     links.forEach(link => {
         Linksdivs.push(
-            <div class="m-5">
+            <div class="m-3">
                 <a href={link.httplink}>
                     <img class="object-contain h-10" alt={link.alt} src={link.iconLink} />
                 </a>
@@ -54,19 +54,21 @@ function Home() {
     text.forEach(txt => bodyContent.push(<p class="px-4 py-2">{txt}</p>))
     return (
         <div className="flex flex-wrap justify-center overflow-hidden rounded p-3">
-            <div class="max-w-full md:max-w-lg rounded overflow-hidden">
-                <img class="object-cover w-full" alt="Home" src="https://picsum.photos/600/400/?random" />
-            </div>
-            <div class="max-w-full md:max-w-lg rounded overflow-hidden">
-                <div class="px-4 py-2">
-                    <p class="font-mono text-xl md:text-2xl font-black">
-                        {title}
-                    </p>
-                    <div class="block font-sans text-justify text-lg md:text-xl text-left">
-                        {bodyContent}
-                    </div>
+            <div name="This is the true elements">
+                <div class="m-auto max-w-full md:max-w-lg rounded overflow-hidden">
+                    <img class="object-cover w-full" alt="Home" src="https://picsum.photos/600/400/?random" />
                 </div>
-                <MyLinks />
+                <div class="m-auto max-w-full md:max-w-lg rounded overflow-hidden">
+                    <div class="px-4 py-2">
+                        <p class="font-mono text-xl md:text-2xl font-black">
+                            {title}
+                        </p>
+                        <div class="block font-sans text-justify text-lg md:text-xl text-left">
+                            {bodyContent}
+                        </div>
+                    </div>
+                    <MyLinks />
+                </div>
             </div>
 
         </div>
