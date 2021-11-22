@@ -15,8 +15,7 @@ import Experience from './models/Experience'
 import Project from './models/Project'
 import Education from './models/Education'
 import NavigationBarItem from './models/NavigationBarItem'
-import ArticlesComponent from './components/Articles'
-
+import ArticleCard from './components/ArticleCard'
 
 
 function GetArticle(id) {
