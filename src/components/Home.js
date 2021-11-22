@@ -4,22 +4,22 @@ let links = [
     {
         httplink: "https://twitter.com/SouhailElk",
         al: "Twitter",
-        iconLink: "https://www.flaticon.com/svg/static/icons/svg/145/145812.svg"
+        iconLink: "https://img.icons8.com/color/48/000000/twitter--v1.png"
     },
     {
         httplink: "https://github.com/souhailelk",
         alt: "GitHub",
-        iconLink: "https://www.flaticon.com/svg/static/icons/svg/2111/2111425.svg"
+        iconLink: "https://img.icons8.com/ios-filled/50/000000/github.png"
     },
     {
         httplink: "https://www.linkedin.com/in/souhail-elkaissi",
         alt: "LinkedIn",
-        iconLink: "https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"
+        iconLink: "https://img.icons8.com/color/48/000000/linkedin.png"
     },
     {
         httplink: "mailto: elkaissi.souhail.me@gmail.com",
         alt: "mail",
-        iconLink: "https://www.flaticon.com/svg/static/icons/svg/2991/2991144.svg"
+        iconLink: "https://img.icons8.com/color/48/000000/gmail.png"
     }
 ]
 
