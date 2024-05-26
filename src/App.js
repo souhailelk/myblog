@@ -30,7 +30,7 @@ function GetArticle(id) {
 }
 
 function GetResume() {
-  const description = "I'm A junior Software Engineer, I live in Rabat, Morocco.";
+  const description = "I'm a software engineer, living in Rabat, Morocco.";
   var experience = new Experience("société générale africa technologies & services",
     "http://africa-technologies-services.sgcib.com/",
     "Software Engineer",
