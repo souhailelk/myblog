@@ -1,11 +1,14 @@
-const express = require('express')
-const app = express()
+import express from 'express';
+import dotenv from 'dotenv';
+import {Pool} from 'pg';
+import cors from 'cors';
+
+
 const port = 3001
-require('dotenv').config();
-const Pool = require('pg').Pool
+dotenv.config();
+const app = express()
 
 app.use(express.json())
-var cors = require('cors')
 
 app.use(cors()) // Use this after the variable declaration
 
@@ -35,7 +38,7 @@ const getArticles = async () => {
 
 
 
-app.get('/', (req, res) => {
+app.get('/Articles', (req, res) => {
     getArticles().then((val) => {
         res.status(200).json(val);
     });
@@ -44,3 +47,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
+
+module.exports = app;
