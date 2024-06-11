@@ -3,8 +3,6 @@ import dotenv from 'dotenv';
 import {Pool} from 'pg';
 import cors from 'cors';
 
-
-const port = 3001
 dotenv.config();
 const app = express()
 
@@ -44,8 +42,8 @@ app.get('/Articles', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}.`)
+app.listen(() => {
+  console.log(`App running on port.`)
 })
 
 module.exports = app;

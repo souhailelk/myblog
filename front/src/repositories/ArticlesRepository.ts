@@ -5,7 +5,7 @@ import axios from 'axios';
 class ArticlesRepository implements IArticlesRepository {
   async getAllArticles(): Promise<Article[]> {
     console.log("hheerrrre")
-    const val = await axios.get('https://trueback-4vxx9xo2t-souhailelks-projects.vercel.app/')
+    const val = await axios.get('https://trueback.vercel.app')
       .then(response => {
         return response.data
       })
