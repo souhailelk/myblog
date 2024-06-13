@@ -11,7 +11,6 @@ function Article() {
     const {id} = useParams<ArticleParam>();
     const [article, setArticle] = useState<ArticleModel>();
     const [loading, setLoading] = useState(true);
-    console.log("Affsdfs")
     useEffect(() => {
       const fetchArticles = async () => {
         try {
