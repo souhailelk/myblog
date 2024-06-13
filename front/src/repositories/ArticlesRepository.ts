@@ -3,14 +3,15 @@ import IArticlesRepository from "./IArticlesRepository";
 import axios from 'axios';
 
 class ArticlesRepository implements IArticlesRepository {
+  private uri:string = 'https://trueback.vercel.app';
   async getAllArticles(): Promise<Article[]> {
     console.log("hheerrrre")
-    const val = await axios.get('https://trueback.vercel.app')
+    const val = await axios.get(this.uri)
       .then(response => {
         return response.data
       })
       .catch(error => {
-        console.error('----IMM--->' + error);
+        console.error(error)
       });
 
     const articles: Article[] = [];
@@ -18,6 +19,16 @@ class ArticlesRepository implements IArticlesRepository {
       articles.push(new Article(element.id, element.title, element.content, element.date, []))
     });
    return articles;
+  }
+  async getArticleById(id:string): Promise<Article> {
+    const val = await axios.get(this.uri+"Article/"+id)
+      .then(response => {
+        return response.data
+      })
+      .catch(error => {
+        console.error(error)
+      });
+    return val;
   }
 
 }

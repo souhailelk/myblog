@@ -11,6 +11,7 @@
     "@vercel/postgres": "^0.8.0",
     "autoprefixer": "^10.2.6",
     "axios": "^1.7.2",
+    "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "postcss": "^8.3.0",
     "react": "^16.13.1",

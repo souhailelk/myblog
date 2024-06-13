@@ -1,14 +1,9 @@
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-//import ArticleComponent from './Article'
-//import Article from '../models/Article'
-//import ArticlesRepository from '../repositories/ArticlesRepository'
-//import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import ArticleCard from './ArticleCard'
 import Article from '../models/Article';
 import ArticleComponent from '../components/Article';
 import ArticlesRepository from "../repositories/ArticlesRepository";
-
 async function GetArticles() :Promise<Article[]> {
 
   let repository = new ArticlesRepository();
@@ -24,10 +19,8 @@ function Articles() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        console.log("fetching articles")
         const response = await GetArticles();
         setArticles(response);
-        console.log("element fetched"+response)
       } catch (error) {
         console.error('Error fetching articles:', error);
       } finally {
