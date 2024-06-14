@@ -22,7 +22,7 @@ class ArticlesRepository implements IArticlesRepository {
   async getArticleById(id:string): Promise<Article> {
     const val = await axios.get(this.uri+"Article/"+id)
       .then(response => {
-        return response.data
+        return response.data[0]
       })
       .catch(error => {
         console.error(error)

@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import {Pool} from 'pg';
 import cors from 'cors';
@@ -56,14 +56,14 @@ const getArticles = async () => {
 
 
 
-app.get('/Articles', (req, res) => {
+app.get('/Articles', (req: Request, res: Response) => {
     getArticles().then((val) => {
         res.status(200).json(val);
     });
 });
 
 
-app.get('/Article/:id', (req, res) => {
+app.get('/Article/:id', (req: Request, res: Response) => {
   getArticle(req.params.id).then((val) => {
       res.status(200).json(val);
   });
