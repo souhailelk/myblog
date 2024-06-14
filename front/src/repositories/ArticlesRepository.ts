@@ -3,10 +3,9 @@ import IArticlesRepository from "./IArticlesRepository";
 import axios from 'axios';
 
 class ArticlesRepository implements IArticlesRepository {
-  private uri:string = 'https://trueback.vercel.app';
+  private uri:string = 'https://souhailelk-back.vercel.app/';
   async getAllArticles(): Promise<Article[]> {
-    console.log("hheerrrre")
-    const val = await axios.get(this.uri)
+    const val = await axios.get(this.uri+"Articles")
       .then(response => {
         return response.data
       })
