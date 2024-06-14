@@ -34,12 +34,39 @@ const getArticles = async () => {
     }
   };
 
+  const getArticle = async (id:string) => {
+    try {
+      return await new Promise(function (resolve, reject) {
+        pool.query("SELECT * FROM article WHERE id="+id, (error, results) => {
+          if (error) {
+            reject(error);
+          }
+          if (results && results.rows) {
+            resolve(results.rows);
+          } else {
+            reject(new Error("No results found"));
+          }
+        });
+      });
+    } catch (error_1) {
+      console.error(error_1);
+      throw new Error("Internal server error");
+    }
+  };
+
 
 
 app.get('/Articles', (req, res) => {
     getArticles().then((val) => {
         res.status(200).json(val);
     });
+});
+
+
+app.get('/Article/:id', (req, res) => {
+  getArticle(req.params.id).then((val) => {
+      res.status(200).json(val);
+  });
 });
 
 app.listen(() => {
